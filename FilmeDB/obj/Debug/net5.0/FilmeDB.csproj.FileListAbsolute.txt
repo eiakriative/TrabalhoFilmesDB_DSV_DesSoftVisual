@@ -1,0 +1,10 @@
+C:\Users\andre\OneDrive\Documentos\TrabalhoFilmesDB_DSV_DesSoftVisual\FilmeDB\obj\Debug\net5.0\FilmeDB.csproj.AssemblyReference.cache
+C:\Users\andre\OneDrive\Documentos\TrabalhoFilmesDB_DSV_DesSoftVisual\FilmeDB\obj\Debug\net5.0\FilmeDB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\OneDrive\Documentos\TrabalhoFilmesDB_DSV_DesSoftVisual\FilmeDB\obj\Debug\net5.0\FilmeDB.AssemblyInfoInputs.cache
+C:\Users\andre\OneDrive\Documentos\TrabalhoFilmesDB_DSV_DesSoftVisual\FilmeDB\obj\Debug\net5.0\FilmeDB.AssemblyInfo.cs
+C:\Users\andre\OneDrive\Documentos\TrabalhoFilmesDB_DSV_DesSoftVisual\FilmeDB\obj\Debug\net5.0\FilmeDB.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\Documentos\TrabalhoFilmesDB_DSV_DesSoftVisual\FilmeDB\obj\Debug\net5.0\FilmeDB.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\andre\OneDrive\Documentos\TrabalhoFilmesDB_DSV_DesSoftVisual\FilmeDB\obj\Debug\net5.0\FilmeDB.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\andre\OneDrive\Documentos\TrabalhoFilmesDB_DSV_DesSoftVisual\FilmeDB\obj\Debug\net5.0\FilmeDB.dll
+C:\Users\andre\OneDrive\Documentos\TrabalhoFilmesDB_DSV_DesSoftVisual\FilmeDB\obj\Debug\net5.0\ref\FilmeDB.dll
+C:\Users\andre\OneDrive\Documentos\TrabalhoFilmesDB_DSV_DesSoftVisual\FilmeDB\obj\Debug\net5.0\FilmeDB.pdb
