@@ -1,32 +1,40 @@
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
+using FilmeDB.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 
-namespace FilmeDB.Controllers
+namespace API.Controllers
 {
-    [Route("[controller]")]
-    public class AtorController : Controller
+    [ApiController]
+    [Route("api/funcionario")]
+    public class FuncionarioController : ControllerBase
     {
-        private readonly ILogger<AtorController> _logger;
+        private readonly DataContext _context;
+        public FuncionarioController(DataContext context) =>
+            _context = context;
 
-        public AtorController(ILogger<AtorController> logger)
+        // GET: /api/funcionario/listar
+        [HttpGet]
+        [Route("listar")]
+        public IActionResult Listar() => Ok(_context.Atores.Include(x => x.Filme).ToList());
+
+        // POST: /api/funcionario/cadastrar
+        [HttpPost]
+        [Route("cadastrar")]
+        public IActionResult Cadastrar([FromBody] Ator ator)
         {
-            _logger = logger;
+            _context.Atores.Add(ator);
+            _context.SaveChanges();
+            return Created("", ator);
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        // GET: /api/atores/buscar/{nome}
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View("Error!");
-        }
+        // DELETE: /api/atores/deletar/{id}
+        
+
+        // PATCH: /api/atores/alterar
+
     }
 }

@@ -1,64 +1,40 @@
-﻿  [ApiController]
-    [Route("api/funcionario")]
-    public class FuncionarioController : ControllerBase
+﻿using System.Collections.Generic;
+using System.Linq;
+using FilmeDB.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+namespace API.Controllers
+{
+    [ApiController]
+    [Route("api/filme")]
+    public class FilmeController : ControllerBase
     {
-        
-       // GET: /api/filme/listar
-        [Route("listarfilme")]
+        private readonly DataContext _context;
+        public FilmeController(DataContext context) =>
+            _context = context;
+
+        // GET: /api/funcionario/listar
         [HttpGet]
-        public IActionResult Listar() {
+        [Route("listar")]
+        public IActionResult Listar() => Ok(_context.Filmes.Include(x => x.Ator).ToList());
 
-        }
-
-        // POST: /api/filme/cadastrar
-        [Route("cadastrarfilme")]
+        // POST: /api/funcionario/cadastrar
         [HttpPost]
-        public IActionResult Cadastrar()
+        [Route("cadastrar")]
+        public IActionResult Cadastrar([FromBody] Filme filme)
         {
-           return null
+            _context.Filmes.Add(filme);
+            _context.SaveChanges();
+            return Created("", filme);
         }
 
-        // GET: /api/filme/buscar/1995
-        [Route("buscar/{ano}")]
-        [HttpGet]
-        public IActionResult Buscar([FromRoute] string ano)
-        {
+        // GET: /api/atores/buscar/{nome}
 
-            return null;
-        }
-
+        // DELETE: /api/atores/deletar/{id}
         
-        // GET: /api/filme/buscar/terror
-        [Route("buscar/{genero}")]
-        [HttpGet]
-        public IActionResult Buscar([FromRoute] string genero)
-        {
 
-            return null;
-        }
+        // PATCH: /api/atores/alterar
 
-        // GET: /api/filme/buscar/starwars
-        [Route("buscar/{nome}")]
-        [HttpGet]
-        public IActionResult Buscar([FromRoute] string nome)
-        {
-
-            return null;
-        }
-
-        // DELETE: /api/filme/deletar/123
-        [Route("deletar/{nome}")]
-        [HttpDelete]
-        public IActionResult Deletar([FromRoute] string nome)
-        {
-            return null;
-        }
-
-        // PATCH: /api/filme/alterar
-        [Route("alterar")]
-        [HttpPatch]
-        public IActionResult Alterar()
-        {
-           
-        }
+    }
 }
