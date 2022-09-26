@@ -6,7 +6,7 @@
 
  ### Repositorio para grupo do trabalho de quinta na disciplina de Desenvolvimento de Software Visual. 
  ### FILMEDB([FILMEDB]([https://https://github.com/itsandrekanas](https://https://github.com/itsandrekanas/TrabalhoFilmesDB_DSV_DesSoftVisual)))
-
+### TEXTO([ALGUMA COISA](https://https://github.com/itsandrekanas))
  Desenvolvimento da aplicação FILME DB([FILME DB()). 
  ### O objetivo é a criação de uma aplicação com uma database de fimes.
 
