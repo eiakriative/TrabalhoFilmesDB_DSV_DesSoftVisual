@@ -4,9 +4,10 @@
 
 # TrabalhoFilmesDB_DSV_DesSoftVisual
 
-  ### Repositorio para grupo do trabalho de quinta na disciplina de Desenvolvimento de Software Visual. 
-  ### Desenvolvimento da aplicação FILME DB([FILME DB(https://https://github.com/itsandrekanas/TrabalhoFilmesDB_DSV_DesSoftVisual)). 
-  ### O objetivo é a criação de uma aplicação com uma database de fimes.
+ ### Repositorio para grupo do trabalho de quinta na disciplina de Desenvolvimento de Software Visual. 
+ ### FILME DB ([FILME DB]([https://https://github.com/itsandrekanas](https://https://github.com/itsandrekanas/TrabalhoFilmesDB_DSV_DesSoftVisual)))
+ Desenvolvimento da aplicação FILME DB([FILME DB()). 
+ ### O objetivo é a criação de uma aplicação com uma database de fimes.
 
 <br />
 
