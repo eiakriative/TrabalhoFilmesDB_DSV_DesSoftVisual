@@ -21,7 +21,7 @@
 ### Gustavo([@gustavosoaresreis](https://github.com/gustavosoaresreis))
 
 
-## 🚀 Comandos git
+## Comandos git
 
 ### Setar usuário - preencher "" com um username github ou nome de preferença
 git config --global user.name ""
