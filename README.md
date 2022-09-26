@@ -15,7 +15,7 @@
 <br />
 
 ## 🚀 Alunos envolvidos
-### André([@itsandrekanas](https://https://github.com/itsandrekanas))
+### André([@itsandrekanas](https://github.com/itsandrekanas))
 ### Amanda([@amandagaabs](https://github.com/amandagaabs))
 ### Daniel([@Daniel-Diniz](https://github.com/Daniel-Diniz))
 ### Gustavo([@gustavosoaresreis](https://github.com/gustavosoaresreis))
