@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace API.Controllers
 {
     [ApiController]
-    [Route("api/funcionario")]
+    [Route("api/atores")]
     public class FuncionarioController : ControllerBase
     {
         private readonly DataContext _context;

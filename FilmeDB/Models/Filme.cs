@@ -13,8 +13,12 @@ namespace FilmeDB.Models
 
         [Required(ErrorMessage = "O campo nome é obrigatório!")]
         public string Nome { get; set; }
-        public Ator Ator {get; set;}
-        public DateTime Nascimento { get; set; }
+
+       public List<Ator> Ator { get; set; } = new List<Ator>();
+
+        // public int AtorId { get; set; }
+
+        public string Ano { get; set; }
 
         public DateTime CriadoEm { get; set; }
     }

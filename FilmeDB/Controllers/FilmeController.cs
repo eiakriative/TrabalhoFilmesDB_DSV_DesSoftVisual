@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace API.Controllers
 {
     [ApiController]
-    [Route("api/filme")]
+    [Route("api/filmes")]
     public class FilmeController : ControllerBase
     {
         private readonly DataContext _context;
@@ -29,9 +29,9 @@ namespace API.Controllers
             return Created("", filme);
         }
 
-        // GET: /api/atores/buscar/{nome}
+        // GET: /api/filmes/buscar/{nome}
 
-        // DELETE: /api/atores/deletar/{id}
+        // DELETE: /api/filmes/deletar/{id}
         
 
         // PATCH: /api/atores/alterar
