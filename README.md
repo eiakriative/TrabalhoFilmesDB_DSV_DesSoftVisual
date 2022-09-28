@@ -23,25 +23,34 @@
 
 ## Comandos git
 
-### Setar usuário - preencher "" com um username github ou nome de preferença
-git config --global user.name ""
+Link: https://github.com/itsandrekanas/gitcomandos/blob/main/README.md
 
-### Setar email - preencher "" com um email usado no github de preferença
+## Regras para funcionar o projeto
 
-git config --global user.email ""
+### Ao entrar no projeto dar um
 
-### Verificar estado dos arquivos/diretórios
+cd .\FilmesDB\
 
-git status
+dotnet restore
 
-### Add ao repositorio local os arquivos
+dotnet run ou dotnet watch run
 
-git add .
+### Não esqueça da migracao
 
-### Comitar informando com mensagem, favor trocar "" por mensagem com descrição das alterações
+dotnet ef migrations add NomeMigracao
 
-git commit -m "minha mensagem de commit"
+dotnet ef database update
 
-### Enviar arquivos/diretórios para o repositório remoto
+### Caso não rode o projeto
 
-git push -u origin master ou git push
+dotnet tool install --global dotnet-ef --version 5.0.17
+
+obs:  Ao baixar o EntiyFramework as vezes é necessário abrir e reabrir o vscode.
+
+dotnet add package Microsoft.EntityFrameworkCore.InMemory --version 5.0.17
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 5.0.17
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.17
+
+
+
+

@@ -39,12 +39,41 @@ namespace API.Controllers
 
         // DELETE: /api/filmes/deletar/{id}
         
-        // GET: /api/filmes/buscar/{nome}
+        // GET: /api/filmes/buscarpornome/{Nome}
 
-        
+        [HttpGet]
+        [Route("buscarpornome/{Nome}")]
+        public IActionResult BuscarPorNome(string Nome) 
+        {
+             Filme filme = _context.Filmes.FirstOrDefault(f => f.Nome == Nome);
+            //If ternário
+            return filme != null ? Ok(filme) : NotFound();
+        }
 
         // GET: /api/filmes/buscar/{genero}
+        [HttpGet]
+        [Route("buscarporgenero/{Generoid}")]
+        public IActionResult BuscarPorGenero(int Nome)
+        {
+           Filme filme = _context.Filmes.FirstOrDefault
+           (
+            filme => filme.GeneroId.Equals(Nome)
+           );
+            return filme != null ? Ok(filme) : NotFound();
+        }
+       
         // GET: /api/filmes/buscar/{ano}
+
+        [HttpGet]
+        [Route("buscarporano/{Ano}")]
+        public IActionResult BuscarPorAno(string Ano)
+        {
+        {
+           Filme filme = _context.Filmes.FirstOrDefault(f => f.Ano == Ano);
+            //If ternário
+           return filme != null ? Ok(filme) : NotFound();
+        }
+        }
         
     }
 }

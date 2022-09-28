@@ -10,5 +10,14 @@ POST https://localhost:5001/api/generos/cadastrar
 Content-Type: application/json
 
 {
+    "Nome" : "Ação"
+}
+
+###
+
+POST https://localhost:5001/api/generos/cadastrar
+Content-Type: application/json
+
+{
     "Nome" : "Ficção Cientifica"
 }
