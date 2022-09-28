@@ -5,7 +5,7 @@ using FilmeDB.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace API.Controllers
+namespace FilmeDB.Controllers
 {
     [ApiController]
     [Route("api/atores")]

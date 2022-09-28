@@ -13,7 +13,6 @@ namespace FilmeDB.Models
         public Ator() => CriadoEm = DateTime.Now;
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "O campo nome é obrigatório!")]
         public string Nome { get; set; }
 
         public Filme Filme { get; set; }
