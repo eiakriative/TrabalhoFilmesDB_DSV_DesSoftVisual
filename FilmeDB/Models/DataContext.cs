@@ -18,5 +18,7 @@ namespace FilmeDB.Models
         public DbSet<Ator> Atores { get; set; }
 
         public DbSet<Filme> Filmes { get; set; }
+
+        public DbSet<Genero> Generos  { get; set; }
     }
 }

@@ -1,0 +1,14 @@
+### GENERO
+
+### Listar
+
+GET https://localhost:5001/api/generos/listar
+
+### Cadastrar - Ex: Terror / Comedia / Ação / Aventura / Musical / Documentario
+
+POST https://localhost:5001/api/generos/cadastrar
+Content-Type: application/json
+
+{
+    "Nome" : "Ficção Cientifica"
+}

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using FilmeDB.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -14,27 +15,36 @@ namespace API.Controllers
         public FilmeController(DataContext context) =>
             _context = context;
 
-        // GET: /api/funcionario/listar
+        // GET: /api/filmes/listar
         [HttpGet]
         [Route("listar")]
-        public IActionResult Listar() => Ok(_context.Filmes.Include(x => x.Ator).ToList());
+        public IActionResult Listar() =>
+            Ok(_context.Filmes
+            .Include(p => p.Genero)
+            .ToList());
 
-        // POST: /api/funcionario/cadastrar
+        // POST: /api/filmes/cadastrar
         [HttpPost]
         [Route("cadastrar")]
         public IActionResult Cadastrar([FromBody] Filme filme)
         {
+            filme.Genero = _context.Generos.Find(filme.GeneroId);
             _context.Filmes.Add(filme);
             _context.SaveChanges();
-            return Created("", filme);
+            return Created("Filme adicionado com sucesso!", filme);
         }
 
-        // GET: /api/filmes/buscar/{nome}
+
+        // PATCH: /api/filmes/alterar
 
         // DELETE: /api/filmes/deletar/{id}
         
+        // GET: /api/filmes/buscar/{nome}
 
-        // PATCH: /api/atores/alterar
+        
 
+        // GET: /api/filmes/buscar/{genero}
+        // GET: /api/filmes/buscar/{ano}
+        
     }
 }

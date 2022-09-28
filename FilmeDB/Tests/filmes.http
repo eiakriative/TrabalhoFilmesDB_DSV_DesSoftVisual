@@ -6,11 +6,11 @@ GET https://localhost:5001/api/filmes/listar
 
 ### Cadastrar
 
-
 POST https://localhost:5001/api/filmes/cadastrar
 Content-Type: application/json
 
 {
-    "Nome" : "O Dia Depois de Amanhã",
-    "Ano" : "2004"
+    "Nome" : "Missão Impossível",
+    "Ano" : "1996",
+    "GeneroId" : 1
 }

@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using System.Collections.Generic;
 using System.Linq;
 using FilmeDB.Models;
@@ -11,30 +12,32 @@ namespace API.Controllers
     public class FuncionarioController : ControllerBase
     {
         private readonly DataContext _context;
-        public FuncionarioController(DataContext context) =>
-            _context = context;
+        public FuncionarioController(DataContext context) => _context = context;
 
-        // GET: /api/funcionario/listar
+        // GET: /api/atores/listar
         [HttpGet]
         [Route("listar")]
-        public IActionResult Listar() => Ok(_context.Atores.Include(x => x.Filme).ToList());
+        public IActionResult Listar() => Ok(_context.Atores
+            .Include(x => x.Filme)
+            .ToList());
 
-        // POST: /api/funcionario/cadastrar
+        // POST: /api/atores/cadastrar
         [HttpPost]
         [Route("cadastrar")]
         public IActionResult Cadastrar([FromBody] Ator ator)
         {
+            ator.Filme = _context.Filmes.Find(ator.FilmeId);
             _context.Atores.Add(ator);
             _context.SaveChanges();
-            return Created("", ator);
+            return Created("Filme adicionado com sucesso!", ator);
         }
 
-        // GET: /api/atores/buscar/{nome}
+        // PATCH: /api/atores/alterar
 
         // DELETE: /api/atores/deletar/{id}
         
+        // GET: /api/atores/buscar/{nome}
 
-        // PATCH: /api/atores/alterar
 
     }
 }

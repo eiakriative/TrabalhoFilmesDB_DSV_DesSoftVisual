@@ -6,11 +6,11 @@ GET https://localhost:5001/api/atores/listar
 
 ### Cadastrar
 
-
 POST https://localhost:5001/api/atores/cadastrar
 Content-Type: application/json
 
 {
-    "Nome" : "Dennis Quaid",
-    "Nascimento" : "1954-04-09"
+    "Nome" : "Tom Cruise",
+    "Nascimento" : "1962-06-03",
+    "FilmeId" : 2
 }
