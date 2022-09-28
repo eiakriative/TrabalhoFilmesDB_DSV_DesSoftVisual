@@ -26,9 +26,9 @@
 ### Setar usuário - preencher "" com um username github ou nome de preferença
 git config --global user.name ""
 
-### Setar email - preencher "" com um email github de preferença
+### Setar email - preencher "" com um email usado no github de preferença
 
-git config --global user.email leonardo@software-ltda.com.br
+git config --global user.email ""
 
 ### Verificar estado dos arquivos/diretórios
 
