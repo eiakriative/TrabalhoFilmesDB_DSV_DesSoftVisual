@@ -10,7 +10,7 @@ POST https://localhost:5001/api/atores/cadastrar
 Content-Type: application/json
 
 {
-    "Nome" : "Tom Cruiz",
+    "Nome" : "Alfredo Go",
     "Nascimento" : "1962-06-03",
     "FilmeId" : 1
 }

@@ -19,9 +19,12 @@ namespace FilmeDB.Models
 
         public int FilmeId { get; set; }
 
+        public Genero Genero { get; set; }
+        public int GeneroId { get; set; }
+
         public DateTime Nascimento { get; set; }
 
         public DateTime CriadoEm { get; set; }
-        
+
     }
 }

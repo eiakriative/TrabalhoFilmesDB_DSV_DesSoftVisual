@@ -10,7 +10,7 @@ POST https://localhost:5001/api/filmes/cadastrar
 Content-Type: application/json
 
 {
-    "Nome" : "testando",
+    "Nome" : "AB",
     "Ano" : "2021",
     "GeneroId" : 1
 }
@@ -20,7 +20,7 @@ POST https://localhost:5001/api/filmes/cadastrar
 Content-Type: application/json
 
 {
-    "Nome" : "testando 2",
+    "Nome" : "DE",
     "Ano" : "2022",
     "GeneroId" : 2
 }
@@ -29,12 +29,8 @@ Content-Type: application/json
 
 ### Buscar por nome
 
-GET https://localhost:5001/api/filmes/buscarpornome/testando 2
-
-### Buscar por genero
-
-GET https://localhost:5001/api/filmes/buscarporgenero/2
+GET https://localhost:5001/api/filmes/buscarpornome/AB
 
 ### Buscar por ano
 
-GET https://localhost:5001/api/filmes/buscarporano/2021
+GET https://localhost:5001/api/filmes/buscarporano/2022

@@ -19,6 +19,7 @@ namespace FilmeDB.Controllers
         [Route("listar")]
         public IActionResult Listar() => Ok(_context.Atores
             .Include(x => x.Filme)
+            .Include(p => p.Genero)
             .ToList());
 
         // POST: /api/atores/cadastrar
@@ -26,7 +27,8 @@ namespace FilmeDB.Controllers
         [Route("cadastrar")]
         public IActionResult Cadastrar([FromBody] Ator ator)
         {
-            ator.Filme = _context.Filmes.Find(ator.FilmeId);
+            ator.Filme = _context.Filmes
+            .Find(ator.FilmeId);
             _context.Atores.Add(ator);
             _context.SaveChanges();
             return Created("Filme adicionado com sucesso!", ator);
@@ -37,6 +39,16 @@ namespace FilmeDB.Controllers
         // DELETE: /api/atores/deletar/{id}
         
         // GET: /api/atores/buscar/{nome}
+        [HttpGet]
+        [Route("buscarpornome/{Nome}")]
+        public IActionResult BuscarPorNome(string Nome) 
+        {
+             Ator ator = _context.Atores
+             .Include(p => p.Genero)
+             .FirstOrDefault(f => f.Nome == Nome);
+            //If ternário
+            return ator != null ? Ok(ator) : NotFound();
+        }
 
 
     }

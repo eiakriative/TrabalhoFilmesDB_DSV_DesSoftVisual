@@ -28,7 +28,8 @@ namespace API.Controllers
         [Route("cadastrar")]
         public IActionResult Cadastrar([FromBody] Filme filme)
         {
-            filme.Genero = _context.Generos.Find(filme.GeneroId);
+            filme.Genero = _context.Generos
+            .Find(filme.GeneroId);
             _context.Filmes.Add(filme);
             _context.SaveChanges();
             return Created("Filme adicionado com sucesso!", filme);
@@ -45,22 +46,14 @@ namespace API.Controllers
         [Route("buscarpornome/{Nome}")]
         public IActionResult BuscarPorNome(string Nome) 
         {
-             Filme filme = _context.Filmes.FirstOrDefault(f => f.Nome == Nome);
+             Filme filme = _context.Filmes
+             .Include(p => p.Genero)
+             .FirstOrDefault(f => f.Nome == Nome);
             //If ternário
             return filme != null ? Ok(filme) : NotFound();
         }
 
         // GET: /api/filmes/buscar/{genero}
-        [HttpGet]
-        [Route("buscarporgenero/{Generoid}")]
-        public IActionResult BuscarPorGenero(int Nome)
-        {
-           Filme filme = _context.Filmes.FirstOrDefault
-           (
-            filme => filme.GeneroId.Equals(Nome)
-           );
-            return filme != null ? Ok(filme) : NotFound();
-        }
        
         // GET: /api/filmes/buscar/{ano}
 
@@ -69,7 +62,9 @@ namespace API.Controllers
         public IActionResult BuscarPorAno(string Ano)
         {
         {
-           Filme filme = _context.Filmes.FirstOrDefault(f => f.Ano == Ano);
+           Filme filme = _context.Filmes
+           .Include(p => p.Genero)
+           .FirstOrDefault(f => f.Ano == Ano);
             //If ternário
            return filme != null ? Ok(filme) : NotFound();
         }
