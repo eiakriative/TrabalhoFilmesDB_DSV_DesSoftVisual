@@ -63,7 +63,7 @@ Link: https://github.com/itsandrekanas/gitcomandos/blob/main/README.md
 
 ## Regras para funcionar o projeto
 
-### Ao entrar no projeto dar um
+<details open="open"> Ao entrar no projeto dar um
 
 <table>
 <tr>
@@ -115,4 +115,5 @@ dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.17
 </td>
 </tr>
 </table>
+</details>
 
