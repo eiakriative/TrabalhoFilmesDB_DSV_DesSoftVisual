@@ -63,8 +63,6 @@ Link: https://github.com/itsandrekanas/gitcomandos/blob/main/README.md
 
 ## Regras para funcionar o projeto
 
-<details open="open"> Ao entrar no projeto dar um
-
 <table>
 <tr>
 <td>
@@ -91,7 +89,17 @@ dotnet ef migrations add NomeMigracao
 dotnet ef database update
 ```
 
-### Caso não rode o projeto
+ </td>
+</tr>
+</table>
+
+<details open="open"> 
+ 
+<table>
+<tr>
+<td>
+
+ ### Caso não rode o projeto
 
 ```sh
 dotnet tool install --global dotnet-ef --version 5.0.17
