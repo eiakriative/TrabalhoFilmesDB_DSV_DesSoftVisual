@@ -4,7 +4,7 @@
 
 # TrabalhoFilmesDB
 
-## About
+## Sobre
 
 <table>
 <tr>
@@ -20,26 +20,56 @@ Repositorio totalmente voltado para armazenamento do codigo da aplicação para 
 <br />
 
 ## 👨🏻‍🏫 Professor
-### Diogo S. Deconto
+
+<table>
+<tr>
+<td>
+
+### Diogo Steinke Deconto
+
+</td>
+</tr>
+</table>
 
 <br />
 
 ## 🚀 Alunos envolvidos
+
+<table>
+<tr>
+<td>
+
 ### André([@itsandrekanas](https://github.com/itsandrekanas))
 ### Amanda([@amandagaabs](https://github.com/amandagaabs))
 ### Daniel([@Daniel-Diniz](https://github.com/Daniel-Diniz))
 ### Gustavo([@gustavosoaresreis](https://github.com/gustavosoaresreis))
 
+</td>
+</tr>
+</table>
+
 
 ## Comandos git
 
+<table>
+<tr>
+<td>
+
 Link: https://github.com/itsandrekanas/gitcomandos/blob/main/README.md
+
+</td>
+</tr>
+</table>
 
 ## Regras para funcionar o projeto
 
 ### Ao entrar no projeto dar um
 
-```sh
+<table>
+<tr>
+<td>
+
+ ```sh
 cd .\FilmesDB\
 ```
 
@@ -80,3 +110,9 @@ dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 5.0.17
 ```sh
 dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.17
 ```
+
+
+</td>
+</tr>
+</table>
+
