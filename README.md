@@ -2,7 +2,7 @@
 
 <br />
 
-# TrabalhoFilmesDB_DSV_DesSoftVisual
+# TrabalhoFilmesDB
 
  ### Repositorio para grupo do trabalho de quinta na disciplina de Desenvolvimento de Software Visual. 
  ### O objetivo é a criação de uma aplicação com uma database de fimes.
@@ -29,28 +29,44 @@ Link: https://github.com/itsandrekanas/gitcomandos/blob/main/README.md
 
 ### Ao entrar no projeto dar um
 
+```sh
 cd .\FilmesDB\
+```
 
+```sh
 dotnet restore
+```
 
+```sh
 dotnet run ou dotnet watch run
+```
 
 ### Não esqueça da migracao
 
+```sh
 dotnet ef migrations add NomeMigracao
+```
 
+```sh
 dotnet ef database update
+```
 
 ### Caso não rode o projeto
 
+```sh
 dotnet tool install --global dotnet-ef --version 5.0.17
+```
 
 obs:  Ao baixar o EntiyFramework as vezes é necessário abrir e reabrir o vscode.
 
+```sh
 dotnet add package Microsoft.EntityFrameworkCore.InMemory --version 5.0.17
+```
+
+```sh
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 5.0.17
+```
+
+```sh
 dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.17
-
-
-
-
+```
