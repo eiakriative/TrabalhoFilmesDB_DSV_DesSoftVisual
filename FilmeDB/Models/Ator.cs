@@ -17,6 +17,7 @@ namespace FilmeDB.Models
 
         public Filme Filme { get; set; }
 
+        [Required(ErrorMessage = "O campo FilmeId é obrigatório")]
         public int FilmeId { get; set; }
 
         public Genero Genero { get; set; }

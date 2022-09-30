@@ -10,7 +10,8 @@ POST https://localhost:5001/api/atores/cadastrar
 Content-Type: application/json
 
 {
-    "Nome" : "Alfredo Go",
+    "Nome" : "Jo Go",
     "Nascimento" : "1962-06-03",
-    "FilmeId" : 1
+    "FilmeId" : 1,
+    "GeneroId" : 1
 }

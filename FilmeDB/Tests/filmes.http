@@ -20,7 +20,7 @@ POST https://localhost:5001/api/filmes/cadastrar
 Content-Type: application/json
 
 {
-    "Nome" : "DE",
+    "Nome" : "CD",
     "Ano" : "2022",
     "GeneroId" : 2
 }

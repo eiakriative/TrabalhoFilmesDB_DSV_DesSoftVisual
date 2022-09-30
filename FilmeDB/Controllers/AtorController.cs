@@ -27,11 +27,11 @@ namespace FilmeDB.Controllers
         [Route("cadastrar")]
         public IActionResult Cadastrar([FromBody] Ator ator)
         {
-            ator.Filme = _context.Filmes
-            .Find(ator.FilmeId);
+            ator.Filme = _context.Filmes.Find(ator.FilmeId);
+            ator.Genero = _context.Generos.Find(ator.GeneroId);
             _context.Atores.Add(ator);
             _context.SaveChanges();
-            return Created("Filme adicionado com sucesso!", ator);
+            return Created("Ator adicionado com sucesso!", ator);
         }
 
         // PATCH: /api/atores/alterar
