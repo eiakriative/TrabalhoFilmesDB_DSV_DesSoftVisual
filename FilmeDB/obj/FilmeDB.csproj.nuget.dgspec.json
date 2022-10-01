@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\OneDrive\\Documentos\\TrabalhoFilmesDB_DSV_DesSoftVisual\\FilmeDB\\FilmeDB.csproj": {}
+    "C:\\C#\\TrabalhoFilmesDB_DSV_DesSoftVisual\\FilmeDB\\FilmeDB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\OneDrive\\Documentos\\TrabalhoFilmesDB_DSV_DesSoftVisual\\FilmeDB\\FilmeDB.csproj": {
+    "C:\\C#\\TrabalhoFilmesDB_DSV_DesSoftVisual\\FilmeDB\\FilmeDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Documentos\\TrabalhoFilmesDB_DSV_DesSoftVisual\\FilmeDB\\FilmeDB.csproj",
+        "projectUniqueName": "C:\\C#\\TrabalhoFilmesDB_DSV_DesSoftVisual\\FilmeDB\\FilmeDB.csproj",
         "projectName": "FilmeDB",
-        "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\TrabalhoFilmesDB_DSV_DesSoftVisual\\FilmeDB\\FilmeDB.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\OneDrive\\Documentos\\TrabalhoFilmesDB_DSV_DesSoftVisual\\FilmeDB\\obj\\",
+        "projectPath": "C:\\C#\\TrabalhoFilmesDB_DSV_DesSoftVisual\\FilmeDB\\FilmeDB.csproj",
+        "packagesPath": "C:\\Users\\Gustavo Reis\\.nuget\\packages\\",
+        "outputPath": "C:\\C#\\TrabalhoFilmesDB_DSV_DesSoftVisual\\FilmeDB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Gustavo Reis\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

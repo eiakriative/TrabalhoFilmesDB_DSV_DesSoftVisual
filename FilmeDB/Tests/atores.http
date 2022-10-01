@@ -12,6 +12,25 @@ Content-Type: application/json
 {
     "Nome" : "Jo Go",
     "Nascimento" : "1962-06-03",
-    "FilmeId" : 1,
+    "FilmeId" : 2,
     "GeneroId" : 1
 }
+
+
+### Alterar
+
+PUT https://localhost:5001/api/atores/editar
+Content-Type: application/json
+
+{
+    "Id" : 1,
+    "Nome" : "Jo jou",
+    "Nascimento" : "1962-06-03",
+    "FilmeId" : 2,
+    "GeneroId" : 1
+}
+
+### Deletar
+
+DELETE https://localhost:5001/api/atores/deletar/1
+

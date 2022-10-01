@@ -36,9 +36,35 @@ namespace API.Controllers
         }
 
 
-        // PATCH: /api/filmes/alterar
+        // PUT: /api/filmes/editar
+        [Route("editar")]
+        [HttpPut]
+        public IActionResult Editar([FromBody] Filme filme)
+        {
+            _context.Filmes.Update(filme);
+            _context.SaveChanges();
+            return Ok(filme);
+        }
 
         // DELETE: /api/filmes/deletar/{id}
+        [HttpDelete]
+        [Route("delete/{id}")]
+        public IActionResult Delete([FromRoute] int? id)
+        {
+
+            Filme filme = _context.Filmes.FirstOrDefault
+            (
+                filme => filme.Id == id
+            );
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+            _context.Filmes.Remove(filme);
+            _context.SaveChanges();
+            return Ok(_context.Filmes.ToList());
+        }
         
         // GET: /api/filmes/buscarpornome/{Nome}
 

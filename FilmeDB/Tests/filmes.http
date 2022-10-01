@@ -33,4 +33,19 @@ GET https://localhost:5001/api/filmes/buscarpornome/AB
 
 ### Buscar por ano
 
-GET https://localhost:5001/api/filmes/buscarporano/2022
+GET https://localhost:5001/api/filmes/buscarporano/2021
+
+### Editar
+
+PUT  https://localhost:5001/api/filmes/editar
+Content-Type: application/json
+
+{
+    "Id" : 1,
+    "Nome" : "AA",
+    "Ano" : "2001",
+    "GeneroId" : 1
+}
+
+### Deletar
+DELETE https://localhost:5001/api/filmes/deletar/1

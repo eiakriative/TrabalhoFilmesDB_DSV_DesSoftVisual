@@ -34,9 +34,33 @@ namespace FilmeDB.Controllers
             return Created("Ator adicionado com sucesso!", ator);
         }
 
-        // PATCH: /api/atores/alterar
-
+        // PUT: /api/atores/editar
+        [Route("editar")]
+        [HttpPut]
+        public IActionResult Editar([FromBody] Ator ator)
+        {
+            _context.Atores.Update(ator);
+            _context.SaveChanges();
+            return Ok(ator);
+        }
         // DELETE: /api/atores/deletar/{id}
+        [HttpDelete]
+        [Route("deletar/{id}")]
+        public IActionResult Delete([FromRoute] int? id)
+        {
+            Ator ator = _context.Atores.FirstOrDefault
+            (
+                ator => ator.Id == id
+            );
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+            _context.Atores.Remove(ator);
+            _context.SaveChanges();
+            return Ok(_context.Atores.ToList());
+        }
         
         // GET: /api/atores/buscar/{nome}
         [HttpGet]
