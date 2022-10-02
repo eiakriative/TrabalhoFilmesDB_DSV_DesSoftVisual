@@ -21,3 +21,12 @@ Content-Type: application/json
 {
     "Nome" : "Ficçao Cientifica"
 }
+
+### Editar
+
+PUT https://localhost:5001/api/generos/editar
+Content-Type: application/json
+
+{
+    "Nome" : "Terror"
+}

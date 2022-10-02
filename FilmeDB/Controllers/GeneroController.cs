@@ -31,7 +31,17 @@ namespace FilmeDB.Controllers
         public IActionResult Listar() => Ok(_context.Generos.ToList());
 
         
-        // PATCH: /api/atores/alterar
+        // PATCH: /api/atores/editar
+        
+        [Route("Editar")]
+        [HttpPut]
+        public IActionResult Editar([FromBody] Genero genero)
+        {
+            _context.Generos.Update(genero);
+            _context.SaveChanges();
+            return Ok(genero);
+        }
+
 
         // DELETE: /api/atores/deletar/{id}
         
