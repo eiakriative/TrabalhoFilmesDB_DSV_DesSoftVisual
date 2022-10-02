@@ -30,3 +30,6 @@ Content-Type: application/json
 {
     "Nome" : "Terror"
 }
+
+### Deletar
+DELETE https://localhost:5001/api/Atores/deletar/3
