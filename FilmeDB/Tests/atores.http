@@ -44,5 +44,5 @@ Content-Type: application/json
 
 ### Deletar
 
-DELETE https://localhost:5001/api/atores/deletar/8
+DELETE https://localhost:5001/api/atores/deletar/2
 
