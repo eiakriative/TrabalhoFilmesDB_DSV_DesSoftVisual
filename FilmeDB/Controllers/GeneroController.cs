@@ -43,26 +43,26 @@ namespace FilmeDB.Controllers
         }
 
 
-        // DELETE: /api/atores/deletar/{id}
-
-        [HttpDelete]
+      // DELETE: /api/generos/deletar/{id}
+ 	 /* [HttpDelete]
         [Route("delete/{id}")]
         public IActionResult Delete([FromRoute] int? id)
         {
 
-            Ator ator = _context.Atores.FirstOrDefault
+            Genero gen = _context.Generos.FirstOrDefault
             (
-                ator => ator.Id == id
+                gen => gen.Id == id
             );
 
             if (id == null)
             {
                 return NotFound();
             }
-            _context.Atores.Remove(ator);
+            _context.Generos.Remove(gen);
             _context.SaveChanges();
-            return Deletado(_context.Atores.ToList());
+            return Ok(_context.Generos.ToList());
         }
+     */
         
     }
 }

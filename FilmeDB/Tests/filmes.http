@@ -10,8 +10,8 @@ POST https://localhost:5001/api/filmes/cadastrar
 Content-Type: application/json
 
 {
-    "Nome" : "AB",
-    "Ano" : "2021",
+    "Nome" : "Life in a Year",
+    "Ano" : "2020",
     "GeneroId" : 1
 }
 
@@ -20,7 +20,17 @@ POST https://localhost:5001/api/filmes/cadastrar
 Content-Type: application/json
 
 {
-    "Nome" : "CD",
+    "Nome" : "Umma",
+    "Ano" : "2022",
+    "GeneroId" : 2
+}
+###
+
+POST https://localhost:5001/api/filmes/cadastrar
+Content-Type: application/json
+
+{
+    "Nome" : "Minions 2: A Origem de Gru",
     "Ano" : "2022",
     "GeneroId" : 2
 }
@@ -48,4 +58,4 @@ Content-Type: application/json
 }
 
 ### Deletar
-DELETE https://localhost:5001/api/filmes/deletar/1
+DELETE https://localhost:5001/api/filmes/deletar/3

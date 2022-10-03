@@ -22,6 +22,52 @@ Content-Type: application/json
     "Nome" : "Ficçao Cientifica"
 }
 
+###
+
+POST https://localhost:5001/api/generos/cadastrar
+Content-Type: application/json
+
+{
+    "Nome" : "Documentario"
+}
+
+###
+
+POST https://localhost:5001/api/generos/cadastrar
+Content-Type: application/json
+
+{
+    "Nome" : "Musical"
+}
+
+###
+
+POST https://localhost:5001/api/generos/cadastrar
+Content-Type: application/json
+
+{
+    "Nome" : "Romance"
+}
+
+###
+
+POST https://localhost:5001/api/generos/cadastrar
+Content-Type: application/json
+
+{
+    "Nome" : "Comedia"
+}
+
+###
+
+POST https://localhost:5001/api/generos/cadastrar
+Content-Type: application/json
+
+{
+    "Nome" : "Aventura"
+}
+
+
 ### Editar
 
 PUT https://localhost:5001/api/generos/editar
@@ -31,5 +77,5 @@ Content-Type: application/json
     "Nome" : "Terror"
 }
 
-### Deletar
-DELETE https://localhost:5001/api/Atores/deletar/3
+//### Deletar
+//DELETE https://localhost:5001/api/Generos/deletar/Terror

@@ -10,8 +10,8 @@ POST https://localhost:5001/api/atores/cadastrar
 Content-Type: application/json
 
 {
-    "Nome" : "Jo Go",
-    "Nascimento" : "1962-06-03",
+    "Nome" : "Daniel Craig",
+    "Nascimento" : "1968-03-02",
     "FilmeId" : 2,
     "GeneroId" : 1
 }
@@ -32,5 +32,5 @@ Content-Type: application/json
 
 ### Deletar
 
-DELETE https://localhost:5001/api/atores/deletar/1
+DELETE https://localhost:5001/api/atores/deletar/8
 
