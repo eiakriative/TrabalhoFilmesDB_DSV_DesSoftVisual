@@ -15,6 +15,18 @@ Content-Type: application/json
     "FilmeId" : 2,
     "GeneroId" : 1
 }
+### 
+
+POST https://localhost:5001/api/atores/cadastrar
+Content-Type: application/json
+
+{
+    "Nome" : "Brad Pitt",
+    "Nascimento" : "1963-12-18",
+    "FilmeId" : 6,
+    "GeneroId" : 1
+}
+
 
 
 ### Alterar
@@ -24,8 +36,8 @@ Content-Type: application/json
 
 {
     "Id" : 1,
-    "Nome" : "Jo jou",
-    "Nascimento" : "1962-06-03",
+    "Nome" : "jo jou",
+    "Nascimento" : "1969-06-03",
     "FilmeId" : 2,
     "GeneroId" : 1
 }
