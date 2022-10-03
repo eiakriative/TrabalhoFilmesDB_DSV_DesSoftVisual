@@ -68,4 +68,5 @@ Content-Type: application/json
 }
 
 ### Deletar
+
 DELETE https://localhost:5001/api/filmes/deletar/3

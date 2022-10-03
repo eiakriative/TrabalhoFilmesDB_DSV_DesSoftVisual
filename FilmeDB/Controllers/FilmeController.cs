@@ -48,10 +48,9 @@ namespace API.Controllers
 
         // DELETE: /api/filmes/deletar/{id}
         [HttpDelete]
-        [Route("delete/{id}")]
+        [Route("deletar/{id}")]
         public IActionResult Delete([FromRoute] int? id)
         {
-
             Filme filme = _context.Filmes.FirstOrDefault
             (
                 filme => filme.Id == id
@@ -65,7 +64,6 @@ namespace API.Controllers
             _context.SaveChanges();
             return Ok(_context.Filmes.ToList());
         }
-        
         // GET: /api/filmes/buscarpornome/{Nome}
 
         [HttpGet]
@@ -79,8 +77,7 @@ namespace API.Controllers
             return filme != null ? Ok(filme) : NotFound();
         }
 
-        // GET: /api/filmes/buscar/{genero}
-       
+                
         // GET: /api/filmes/buscar/{ano}
 
         [HttpGet]
