@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CadastrarCategoriaComponent } from './componentes/pages/categoria/cadastrar-categoria/cadastrar-categoria.component';
-import { ListarCategoriaComponent } from './componentes/pages/categoria/listar-categoria/listar-categoria.component';
+import { CadastrarGeneroComponent } from './componentes/pages/genero/cadastrar-genero/cadastrar-genero.component';
+import { ListarGeneroComponent } from './componentes/pages/genero/listar-genero/listar-genero.component';
 
 const routes: Routes = [
   {
-    path: "pages/categoria/cadastrar-categoria",
-    component: CadastrarCategoriaComponent
+    path: "pages/genero/cadastrar-genero",
+    component: CadastrarGeneroComponent
   },
   {
-    path: "pages/categoria/listar-categoria",
-    component: ListarCategoriaComponent
+    path: "pages/genero/listar-genero",
+    component:  ListarGeneroComponent
   }
 ];
 

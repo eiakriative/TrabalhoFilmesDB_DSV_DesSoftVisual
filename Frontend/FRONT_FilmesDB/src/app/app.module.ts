@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CadastrarCategoriaComponent } from './componentes/pages/categoria/cadastrar-categoria/cadastrar-categoria.component';
-import { ListarCategoriaComponent } from './componentes/pages/categoria/listar-categoria/listar-categoria.component';
+import { CadastrarGeneroComponent } from './componentes/pages/genero/cadastrar-genero/cadastrar-genero.component';
+import { ListarGeneroComponent } from './componentes/pages/genero/listar-genero/listar-genero.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CadastrarCategoriaComponent,
-    ListarCategoriaComponent
+    CadastrarGeneroComponent,
+    ListarGeneroComponent
     ],
   imports: [
     BrowserModule,
