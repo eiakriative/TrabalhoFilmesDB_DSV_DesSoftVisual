@@ -1,0 +1,18 @@
+<table class="customtabela" style="width:1200px; margin:0 auto;" >
+    <tr>
+        <th> # </th>
+        <th> Nome </th>
+        <th> Criado em </th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let genero of generos">
+        <td>{{ genero.Id }}</td>
+        <td>{{ genero.nome }}</td>
+        <td>{{ genero.criadoEm }}</td>
+        <td></td>
+        <td>
+           <a routerLink="/pages/funcionario/cadastrar/{{ genero.Id! }}">Alterar</a>
+        </td>
+    </tr>
+</table>
+

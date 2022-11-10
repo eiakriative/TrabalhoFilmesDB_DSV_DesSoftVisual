@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "6e3b5762-259f-421e-bd41-d9f18d2367a9"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -31,6 +34,9 @@
         },
         "@schematics/angular:service": {
           "skipTests": true
+        },
+        "@schematics/angular:application": {
+          "strict": true
         }
       },
       "root": "",
@@ -40,7 +46,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/front-filmes-db",
+            "outputPath": "dist/front-folhas",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,6 +56,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -95,10 +102,7 @@
             },
             "development": {
               "browserTarget": "FRONT_FilmesDB:build:development"
-            }            
-          },
-          "options": {
-            "port": 5001
+            }
           },
           "defaultConfiguration": "development"
         },
@@ -111,7 +115,5 @@
       }
     }
   },
-  "cli": {
-    "analytics": "54ac85a9-ea61-4ac1-a39d-15a7bcfcaa22"
-  }
+  "defaultProject": "FRONT_FilmesDB"
 }

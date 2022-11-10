@@ -1,5 +1,5 @@
-export interface Genero {
+export interface Genero{
     Id?: number;
-    Nome: string;
-    criadoEm?: string;
+    nome: string;
+    criadoEm: string;
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\amandagd\\Desktop\\FilmeDB\\TrabalhoFilmesDB_DSV_DesSoftVisual\\FilmeDB\\FilmeDB.csproj": {}
+    "C:\\Users\\alhka\\OneDrive\\Documentos\\Workspace\\TrabalhoFilmesDB_DSV_DesSoftVisual\\Backend_API\\FilmeDB\\FilmeDB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\amandagd\\Desktop\\FilmeDB\\TrabalhoFilmesDB_DSV_DesSoftVisual\\FilmeDB\\FilmeDB.csproj": {
+    "C:\\Users\\alhka\\OneDrive\\Documentos\\Workspace\\TrabalhoFilmesDB_DSV_DesSoftVisual\\Backend_API\\FilmeDB\\FilmeDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amandagd\\Desktop\\FilmeDB\\TrabalhoFilmesDB_DSV_DesSoftVisual\\FilmeDB\\FilmeDB.csproj",
+        "projectUniqueName": "C:\\Users\\alhka\\OneDrive\\Documentos\\Workspace\\TrabalhoFilmesDB_DSV_DesSoftVisual\\Backend_API\\FilmeDB\\FilmeDB.csproj",
         "projectName": "FilmeDB",
-        "projectPath": "C:\\Users\\amandagd\\Desktop\\FilmeDB\\TrabalhoFilmesDB_DSV_DesSoftVisual\\FilmeDB\\FilmeDB.csproj",
-        "packagesPath": "C:\\Users\\amandagd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amandagd\\Desktop\\FilmeDB\\TrabalhoFilmesDB_DSV_DesSoftVisual\\FilmeDB\\obj\\",
+        "projectPath": "C:\\Users\\alhka\\OneDrive\\Documentos\\Workspace\\TrabalhoFilmesDB_DSV_DesSoftVisual\\Backend_API\\FilmeDB\\FilmeDB.csproj",
+        "packagesPath": "C:\\Users\\alhka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alhka\\OneDrive\\Documentos\\Workspace\\TrabalhoFilmesDB_DSV_DesSoftVisual\\Backend_API\\FilmeDB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\amandagd\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\alhka\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
