@@ -1,8 +1,7 @@
-import { Genero } from '../../../../models/Genero';
+import { HttpClient } from "@angular/common/http";
 import { Component, OnInit } from "@angular/core";
-import { HttpClient } from '@angular/common/http';
-import { Console } from 'console';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router } from "@angular/router";
+import { Genero } from "src/app/models/genero";
 
 @Component({
   selector: "app-cadastrar-genero",
@@ -12,26 +11,44 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CadastrarGeneroComponent implements OnInit {
   nome!: string;
   mensagem!: string;
-  id!: number;
+  GenId!: number;
 
-  constructor(
-    private http : HttpClient, 
-    private router : Router, 
-    private route: ActivatedRoute) {} 
+  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.route.params.subscribe({
       next: (params) => {
-        let {id} = params;
-        this.id = id;
-      } 
-    })
+        let { id } = params;
+        if (id !== undefined) {
+          this.http.get<Genero>(`https://localhost:5001/api/generos/buscar/${id}`)
+          .subscribe({
+            next: (generos) => {
+              this.GenId = id!;
+              this.nome = generos.nome;
+             },
+          });
+        }
+      },
+    });
+  }
+
+  alterar(): void {
+    let genero : Genero = {
+      Id: this.GenId,
+      nome: this.nome,
+      criadoEm: "2022-01-22: 17:00"
+    };
+
+    this.http.patch<Genero>("https://localhost:5001/api/generos/editar", genero)
+    .subscribe({
+      next: (genero) => {
+        this.router.navigate(["pages/genero/listar"]);
+      },
+    });
   }
 
   cadastrar(): void {
-
     let genero: Genero = {
-      Id: this.id,
       nome: this.nome,
       criadoEm: "2022-01-25",
     };

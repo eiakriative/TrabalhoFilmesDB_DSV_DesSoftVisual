@@ -32,37 +32,40 @@ namespace FilmeDB.Controllers
 
         
         // PATCH: /api/atores/editar
-        
-        [Route("Editar")]
-        [HttpPut]
+        // [Route("Editar")]
+        // [HttpPut]
+        // public IActionResult Editar([FromBody] Genero genero)
+        // {
+        //     _context.Generos.Update(genero);
+        //     _context.SaveChanges();
+        //     return Ok(genero);
+        // }
+
+ 	// GET: /api/generos/buscar/{id}
+        [HttpGet]
+        [Route("buscar/{id}")]
+        public IActionResult Buscar([FromRoute] int id)
+        {
+            Genero genero = _context.Generos.
+                Find(id);
+            return genero != null ? Ok(genero) : NotFound();
+        }
+
+        // PATCH: /api/generos/editar
+        [HttpPatch]
+        [Route("editar")]
         public IActionResult Editar([FromBody] Genero genero)
         {
-            _context.Generos.Update(genero);
-            _context.SaveChanges();
-            return Ok(genero);
-        }
-
-
-      // DELETE: /api/generos/deletar/{id}
- 	 /* [HttpDelete]
-        [Route("delete/{id}")]
-        public IActionResult Delete([FromRoute] int? id)
-        {
-
-            Genero gen = _context.Generos.FirstOrDefault
-            (
-                gen => gen.Id == id
-            );
-
-            if (id == null)
+            try
+            {
+                _context.Generos.Update(genero);
+                _context.SaveChanges();
+                return Ok(genero);
+            }
+            catch
             {
                 return NotFound();
-            }
-            _context.Generos.Remove(gen);
-            _context.SaveChanges();
-            return Ok(_context.Generos.ToList());
+            }           
         }
-     */
-        
-    }
+}
 }

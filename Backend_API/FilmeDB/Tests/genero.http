@@ -10,7 +10,7 @@ POST https://localhost:5001/api/generos/cadastrar
 Content-Type: application/json
 
 {
-    "Nome" : "Acao"
+    "Nome" : "Show"
 }
 
 ###
@@ -70,10 +70,11 @@ Content-Type: application/json
 
 ### Editar
 
-PUT https://localhost:5001/api/generos/editar
+PATCH https://localhost:5001/api/generos/editar
 Content-Type: application/json
 
 {
+    "Id" : "82",
     "Nome" : "Terror"
 }
 

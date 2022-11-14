@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "6e3b5762-259f-421e-bd41-d9f18d2367a9"
+    "analytics": "ecff1b79-01c2-4292-884a-af5142f33f3a"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FRONT_FilmesDB": {
+    "FRONT_Folhas": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -56,7 +56,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/custom-theme.scss",
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -98,10 +98,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "FRONT_FilmesDB:build:production"
+              "browserTarget": "FRONT_Folhas:build:production"
             },
             "development": {
-              "browserTarget": "FRONT_FilmesDB:build:development"
+              "browserTarget": "FRONT_Folhas:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -109,11 +109,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FRONT_FilmesDB:build"
+            "browserTarget": "FRONT_Folhas:build"
           }
         }
       }
     }
   },
-  "defaultProject": "FRONT_FilmesDB"
+  "defaultProject": "FRONT_Folhas"
 }
