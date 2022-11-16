@@ -11,7 +11,7 @@ import { Genero } from "src/app/models/genero";
 export class CadastrarGeneroComponent implements OnInit {
   nome!: string;
   mensagem!: string;
-  GenId!: number;
+  generoId!: number;
 
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) {}
 
@@ -23,7 +23,7 @@ export class CadastrarGeneroComponent implements OnInit {
           this.http.get<Genero>(`https://localhost:5001/api/generos/buscar/${id}`)
           .subscribe({
             next: (generos) => {
-              this.GenId = id!;
+              this.generoId = id!;
               this.nome = generos.nome;
              },
           });
@@ -34,13 +34,10 @@ export class CadastrarGeneroComponent implements OnInit {
 
   alterar(): void {
     let genero : Genero = {
-      Id: this.GenId,
+      generoId: this.generoId,
       nome: this.nome,
-      criadoEm: "2022-01-22: 17:00"
     };
-
-    this.http.patch<Genero>("https://localhost:5001/api/generos/editar", genero)
-    .subscribe({
+    this.http.patch<Genero>("https://localhost:5001/api/generos/editar", genero).subscribe({
       next: (genero) => {
         this.router.navigate(["pages/genero/listar"]);
       },
@@ -49,8 +46,7 @@ export class CadastrarGeneroComponent implements OnInit {
 
   cadastrar(): void {
     let genero: Genero = {
-      nome: this.nome,
-      criadoEm: "2022-01-25",
+      nome: this.nome
     };
     
     this.http.post<Genero>("https://localhost:5001/api/generos/cadastrar", 

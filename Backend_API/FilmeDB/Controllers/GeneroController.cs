@@ -30,24 +30,13 @@ namespace FilmeDB.Controllers
         [Route("listar")]
         public IActionResult Listar() => Ok(_context.Generos.ToList());
 
-        
-        // PATCH: /api/atores/editar
-        // [Route("Editar")]
-        // [HttpPut]
-        // public IActionResult Editar([FromBody] Genero genero)
-        // {
-        //     _context.Generos.Update(genero);
-        //     _context.SaveChanges();
-        //     return Ok(genero);
-        // }
 
- 	// GET: /api/generos/buscar/{id}
+     	// GET: /api/generos/buscar/{id}
         [HttpGet]
         [Route("buscar/{id}")]
         public IActionResult Buscar([FromRoute] int id)
         {
-            Genero genero = _context.Generos.
-                Find(id);
+            Genero genero = _context.Generos.Find(id);
             return genero != null ? Ok(genero) : NotFound();
         }
 
@@ -56,16 +45,10 @@ namespace FilmeDB.Controllers
         [Route("editar")]
         public IActionResult Editar([FromBody] Genero genero)
         {
-            try
-            {
                 _context.Generos.Update(genero);
                 _context.SaveChanges();
                 return Ok(genero);
-            }
-            catch
-            {
-                return NotFound();
-            }           
+                      
         }
 }
 }

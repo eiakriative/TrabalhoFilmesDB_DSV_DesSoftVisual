@@ -35,14 +35,15 @@ namespace FilmeDB.Controllers
         }
 
         // PUT: /api/atores/editar
-        [Route("editar")]
         [HttpPut]
+        [Route("editar")]
         public IActionResult Editar([FromBody] Ator ator)
         {
             _context.Atores.Update(ator);
             _context.SaveChanges();
             return Ok(ator);
         }
+
         // DELETE: /api/atores/deletar/{id}
         [HttpDelete]
         [Route("deletar/{id}")]
@@ -63,16 +64,13 @@ namespace FilmeDB.Controllers
         }
         
         // GET: /api/atores/buscar/{nome}
-        [HttpGet]
+       [HttpGet]
         [Route("buscarpornome/{Nome}")]
-        public IActionResult BuscarPorNome(string Nome) 
-        {
-             Ator ator = _context.Atores
-             .Include(p => p.Genero)
-             .FirstOrDefault(f => f.Nome == Nome);
-            //If ternário
-            return ator != null ? Ok(ator) : NotFound();
-        }
+        public IActionResult buscarPorNome([FromRoute] string Nome) =>
+            Ok(_context.Atores
+                .Include(f => f.Genero)
+                .Where(f => f.Nome == Nome
+                ));
 
 
     }

@@ -10,73 +10,15 @@ POST https://localhost:5001/api/generos/cadastrar
 Content-Type: application/json
 
 {
-    "Nome" : "Show"
+    "Nome" : "Ficção Cientifica"
 }
-
-###
-
-POST https://localhost:5001/api/generos/cadastrar
-Content-Type: application/json
-
-{
-    "Nome" : "Ficçao Cientifica"
-}
-
-###
-
-POST https://localhost:5001/api/generos/cadastrar
-Content-Type: application/json
-
-{
-    "Nome" : "Documentario"
-}
-
-###
-
-POST https://localhost:5001/api/generos/cadastrar
-Content-Type: application/json
-
-{
-    "Nome" : "Musical"
-}
-
-###
-
-POST https://localhost:5001/api/generos/cadastrar
-Content-Type: application/json
-
-{
-    "Nome" : "Romance"
-}
-
-###
-
-POST https://localhost:5001/api/generos/cadastrar
-Content-Type: application/json
-
-{
-    "Nome" : "Comedia"
-}
-
-###
-
-POST https://localhost:5001/api/generos/cadastrar
-Content-Type: application/json
-
-{
-    "Nome" : "Aventura"
-}
-
 
 ### Editar
 
-PATCH https://localhost:5001/api/generos/editar
+PATCH  https://localhost:5001/api/generos/editar
 Content-Type: application/json
 
 {
-    "Id" : "82",
-    "Nome" : "Terror"
+    "generoId" : "3",
+    "Nome" : "Fantasia"
 }
-
-//### Deletar
-//DELETE https://localhost:5001/api/Generos/deletar/Terror

@@ -1,18 +1,16 @@
 <h1>Listar Genero</h1>
 
-<table>
+<table id="generoTabela">
     <tr>
         <th>#</th>
         <th>Nome</th>
-        <th>Criado em</th>
         <th>Alterar</th>
     </tr>
     <tr *ngFor="let genero of generos">
-        <td>{{genero.Id}}</td>
+        <td>{{genero.generoId}}</td>
         <td>{{genero.nome}}</td>
-        <td>{{genero.criadoEm}}</td>
         <td>
-            <a routerLink="/pages/genero/cadastrar/{{ genero.Id }}">
+            <a routerLink="/pages/genero/cadastrar/{{ genero.generoId }}">
                 Alterar
             </a>
         </td>

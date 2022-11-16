@@ -73,7 +73,7 @@ namespace FilmeDB.Migrations
 
             modelBuilder.Entity("FilmeDB.Models.Genero", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("generoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -83,7 +83,7 @@ namespace FilmeDB.Migrations
                     b.Property<string>("Nome")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+                    b.HasKey("generoId");
 
                     b.ToTable("Generos");
                 });

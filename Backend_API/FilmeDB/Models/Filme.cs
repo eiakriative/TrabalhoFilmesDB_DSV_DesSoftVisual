@@ -15,13 +15,15 @@ namespace FilmeDB.Models
 
         public string Nome { get; set; }
 
+        public string Ano { get; set; }
+
+        public DateTime CriadoEm { get; set; }
+
+        //Relacionamento
         public Genero Genero { get; set; }
 
         [Required(ErrorMessage = "O campo GêneroId é obrigatório")]
         public int GeneroId { get; set; }
 
-        public string Ano { get; set; }
-
-        public DateTime CriadoEm { get; set; }
     }
 }

@@ -27,5 +27,5 @@ export class ListarGenerosComponent implements OnInit {
           this.generos = generos;
         }
       });
-  }
+  } 
 }

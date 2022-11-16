@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FilmeDB.Migrations
 {
-    public partial class NomeMigracao : Migration
+    public partial class MigracaoAtual1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,14 +11,14 @@ namespace FilmeDB.Migrations
                 name: "Generos",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    generoId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Nome = table.Column<string>(type: "TEXT", nullable: true),
                     CriadoEm = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Generos", x => x.Id);
+                    table.PrimaryKey("PK_Generos", x => x.generoId);
                 });
 
             migrationBuilder.CreateTable(
@@ -39,7 +39,7 @@ namespace FilmeDB.Migrations
                         name: "FK_Filmes_Generos_GeneroId",
                         column: x => x.GeneroId,
                         principalTable: "Generos",
-                        principalColumn: "Id",
+                        principalColumn: "generoId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -68,7 +68,7 @@ namespace FilmeDB.Migrations
                         name: "FK_Atores_Generos_GeneroId",
                         column: x => x.GeneroId,
                         principalTable: "Generos",
-                        principalColumn: "Id",
+                        principalColumn: "generoId",
                         onDelete: ReferentialAction.Cascade);
                 });
 

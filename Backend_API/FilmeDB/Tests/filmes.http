@@ -10,50 +10,21 @@ POST https://localhost:5001/api/filmes/cadastrar
 Content-Type: application/json
 
 {
-    "Nome" : "Life in a Year",
-    "Ano" : "2020",
+    "Nome" : "Harry Potter",
+    "Ano" : "2002",
     "GeneroId" : 1
 }
 ###
-
-POST https://localhost:5001/api/filmes/cadastrar
-Content-Type: application/json
-
-{
-    "Nome" : "Clube da Luta",
-    "Ano" : "1999",
-    "GeneroId" : 1
-}
-
-###
-POST https://localhost:5001/api/filmes/cadastrar
-Content-Type: application/json
-
-{
-    "Nome" : "Umma",
-    "Ano" : "2022",
-    "GeneroId" : 2
-}
-###
-
-POST https://localhost:5001/api/filmes/cadastrar
-Content-Type: application/json
-
-{
-    "Nome" : "Minions 2: A Origem de Gru",
-    "Ano" : "2022",
-    "GeneroId" : 2
-}
 
 ### Buscar
 
 ### Buscar por nome
 
-GET https://localhost:5001/api/filmes/buscarpornome/AB
+GET https://localhost:5001/api/filmes/buscarpornome/Harry Potter
 
 ### Buscar por ano
 
-GET https://localhost:5001/api/filmes/buscarporano/2021
+GET https://localhost:5001/api/filmes/buscarporano/2001
 
 ### Editar
 
@@ -62,11 +33,11 @@ Content-Type: application/json
 
 {
     "Id" : 1,
-    "Nome" : "AA",
-    "Ano" : "2001",
+    "Nome" : "O fugitivo",
+    "Ano" : "1993",
     "GeneroId" : 1
 }
 
 ### Deletar
 
-DELETE https://localhost:5001/api/filmes/deletar/2
+DELETE https://localhost:5001/api/filmes/deletar/1

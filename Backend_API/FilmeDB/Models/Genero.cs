@@ -8,7 +8,7 @@ namespace FilmeDB.Models
     public class Genero
     {
         public Genero() => CriadoEm = DateTime.Now;
-        public int Id { get; set; }
+        public int generoId { get; set; }
         public string Nome { get; set; }
         public DateTime CriadoEm { get; set; }
         

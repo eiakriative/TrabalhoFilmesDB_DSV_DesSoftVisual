@@ -41,9 +41,16 @@ namespace API.Controllers
         [HttpPut]
         public IActionResult Editar([FromBody] Filme filme)
         {
-            _context.Filmes.Update(filme);
-            _context.SaveChanges();
-            return Ok(filme);
+            try
+            {
+                _context.Filmes.Update(filme);
+                _context.SaveChanges();
+                return Ok(filme);   
+            }
+            catch (System.Exception)
+            {
+                return NotFound("Fime não consta no banco!!!");
+            }
         }
 
         // DELETE: /api/filmes/deletar/{id}
@@ -65,33 +72,21 @@ namespace API.Controllers
             return Ok(_context.Filmes.ToList());
         }
         // GET: /api/filmes/buscarpornome/{Nome}
-
         [HttpGet]
         [Route("buscarpornome/{Nome}")]
-        public IActionResult BuscarPorNome(string Nome) 
-        {
-             Filme filme = _context.Filmes
-             .Include(p => p.Genero)
-             .FirstOrDefault(f => f.Nome == Nome);
-            //If ternário
-            return filme != null ? Ok(filme) : NotFound();
-        }
-
-                
-        // GET: /api/filmes/buscar/{ano}
-
+        public IActionResult buscarPorNome([FromRoute] string Nome) =>
+            Ok(_context.Filmes
+                .Include(f => f.Genero)
+                .Where(f => f.Nome == Nome
+                ));
+        
+        // GET: /api/filmes/buscarporano/{ano}
         [HttpGet]
         [Route("buscarporano/{Ano}")]
-        public IActionResult BuscarPorAno(string Ano)
-        {
-        {
-           Filme filme = _context.Filmes
-           .Include(p => p.Genero)
-           .FirstOrDefault(f => f.Ano == Ano);
-            //If ternário
-           return filme != null ? Ok(filme) : NotFound();
-        }
-        }
-        
+        public IActionResult BuscarPorAno([FromRoute] string Ano) =>
+            Ok(_context.Filmes
+                .Include(f => f.Genero)
+                .Where(f => f.Ano == Ano
+                ));
     }
 }

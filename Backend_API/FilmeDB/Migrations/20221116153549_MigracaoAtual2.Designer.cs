@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FilmeDB.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221003003820_Gen")]
-    partial class Gen
+    [Migration("20221116153549_MigracaoAtual2")]
+    partial class MigracaoAtual2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -54,8 +54,8 @@ namespace FilmeDB.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Ano")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Ano")
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("CriadoEm")
                         .HasColumnType("TEXT");
@@ -75,7 +75,7 @@ namespace FilmeDB.Migrations
 
             modelBuilder.Entity("FilmeDB.Models.Genero", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("generoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -85,7 +85,7 @@ namespace FilmeDB.Migrations
                     b.Property<string>("Nome")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+                    b.HasKey("generoId");
 
                     b.ToTable("Generos");
                 });
