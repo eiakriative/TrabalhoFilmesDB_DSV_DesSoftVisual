@@ -16,6 +16,7 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { AppRoutingModule } from "./app-routing.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
+
 import { AppComponent } from "./app.component";
 import { CadastrarGeneroComponent } from './components/pages/genero/cadastrar-genero/cadastrar-genero.component';
 import { ListarGenerosComponent } from './components/pages/genero/listar-generos/listar-generos.component';
@@ -43,7 +44,12 @@ import { ListarFilmeComponent } from './components/pages/filme/listar-filme/list
     MatSelectModule,
     MatButtonModule,
     MatDatepickerModule,
-    MatSnackBarModule
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    MatCardModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
