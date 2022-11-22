@@ -32,7 +32,7 @@ PUT  https://localhost:5001/api/filmes/editar
 Content-Type: application/json
 
 {
-    "filmeId" : 6,
+    "filmeId" : 8,
     "Nome" : "FUnciona?",
     "Ano" : "2022",
     "GeneroId" : 1
