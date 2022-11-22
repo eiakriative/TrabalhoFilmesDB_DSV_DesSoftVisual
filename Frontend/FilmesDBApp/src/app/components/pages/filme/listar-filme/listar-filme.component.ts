@@ -23,4 +23,15 @@ export class ListarFilmeComponent implements OnInit {
         },
       });
   }
+
+  remover(id: number): void {
+    this.http.
+      delete<Filme>
+      (`https://localhost:5001/api/filmes/deletar/${id}`)
+      .subscribe({
+        next: (funcionario) => {
+          this.ngOnInit();
+        },
+      });
+  }
 }

@@ -11,7 +11,7 @@ namespace FilmeDB.Models
         public Filme() => CriadoEm = DateTime.Now;
 
         [Key]
-        public int Id { get; set; }
+        public int filmeId { get; set; }
 
         public string Nome { get; set; }
 

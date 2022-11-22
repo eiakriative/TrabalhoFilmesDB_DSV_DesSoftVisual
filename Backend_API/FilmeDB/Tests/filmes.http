@@ -32,9 +32,9 @@ PUT  https://localhost:5001/api/filmes/editar
 Content-Type: application/json
 
 {
-    "Id" : 1,
-    "Nome" : "O fugitivo",
-    "Ano" : "1993",
+    "filmeId" : 6,
+    "Nome" : "FUnciona?",
+    "Ano" : "2022",
     "GeneroId" : 1
 }
 

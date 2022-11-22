@@ -23,6 +23,10 @@ const routes: Routes = [
     component: CadastrarFilmeComponent,
   },
   {
+    path: "pages/filme/cadastrar/:id",
+    component: CadastrarFilmeComponent,
+  },
+  {
     path: "pages/filme/listar",
     component: ListarFilmeComponent,
   }

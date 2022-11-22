@@ -1,14 +1,24 @@
-<table style="width:800px; margin:0 auto;">
+<table style="width:800px; margin:0 auto;" class="container">
     <tr>
       <th>#</th>
       <th>genero</th>
       <th>None</th>
       <th>Ano</th>
+      <th>Alterar</th>
+      <th>Remover</th>
     </tr>
     <tr *ngFor="let filme of filmes">
-      <td>{{ filme.id }}</td>
+      <td>{{ filme.filmeId }}</td>
       <td>{{ filme.genero?.nome }}</td>
       <td>{{ filme.nome }}</td>
       <td>{{ filme.criadoEm | date: "yyyy" }}</td>
+      <td>
+          <a mat-mini-fab color="primary" routerLink="/pages/filme/cadastrar/{{ filme.filmeId }}">
+            <mat-icon>edit</mat-icon>
+          </a>
+      </td>
+      <td>
+        <button mat-mini-fab color="warn" (click)="remover(filme.filmeId!)"> <mat-icon>delete</mat-icon></button>
+      </td>
     </tr>
   </table>

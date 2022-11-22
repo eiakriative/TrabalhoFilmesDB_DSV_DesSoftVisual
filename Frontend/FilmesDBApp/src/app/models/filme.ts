@@ -1,7 +1,7 @@
 import { Genero } from "./genero";
 
 export interface Filme {
-  id?: number;
+  filmeId?: number;
   nome: string;
   ano: number;
   generoId: number;

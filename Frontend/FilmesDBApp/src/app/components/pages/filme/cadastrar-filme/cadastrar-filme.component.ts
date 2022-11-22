@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { MatSnackBar } from "@angular/material/snack-bar";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { Genero } from 'src/app/models/genero';
 import { Filme } from 'src/app/models/filme';
 
@@ -15,13 +15,53 @@ export class CadastrarFilmeComponent implements OnInit {
   data!: string;
   generos!: Genero[];
   generoId!: number;
+  filmeId!: number;
 
-  constructor(private http: HttpClient, private router: Router, private _snackBar: MatSnackBar) {}
+  constructor(
+    private http: HttpClient, 
+    private router: Router,
+    private route: ActivatedRoute, 
+    private _snackBar: MatSnackBar) {}
+
+  // ngOnInit(): void {
+   
+  // }
 
   ngOnInit(): void {
+    this.route.params.subscribe({
+      next: (params) => {
+        let { id } = params;
+        if (id !== undefined) {
+          this.http.get<Genero>(`https://localhost:5001/api/filmes/buscar/${id}`)
+          .subscribe({
+            next: (generos) => {
+              this.generoId = id!;
+              this.nome = generos.nome;
+             },
+          });
+        }
+      },
+    });
     this.http.get<Genero[]>("https://localhost:5001/api/generos/listar").subscribe({
       next: (generos) => {
         this.generos = generos;
+      },
+    });
+  }
+
+  alterar(): void {
+    console.log(this.generoId);
+    let dataConvertida = new Date(this.data);
+
+    let filme: Filme = {
+      filmeId: this.filmeId,
+      generoId: this.generoId,
+      nome: this.nome,
+      ano: dataConvertida.getFullYear(),
+    };
+    this.http.put<Genero>("https://localhost:5001/api/filmes/editar", filme).subscribe({
+      next: (filme) => {
+        this.router.navigate(["pages/filme/listar"]);
       },
     });
   }
@@ -31,7 +71,8 @@ export class CadastrarFilmeComponent implements OnInit {
     let dataConvertida = new Date(this.data);
 
     let filme: Filme = {
-      generoId:this.generoId,
+      filmeId: this.filmeId,
+      generoId: this.generoId,
       nome: this.nome,
       ano: dataConvertida.getFullYear(),
     };

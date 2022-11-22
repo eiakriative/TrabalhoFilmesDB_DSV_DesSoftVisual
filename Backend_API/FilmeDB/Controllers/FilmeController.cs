@@ -53,6 +53,15 @@ namespace API.Controllers
             }
         }
 
+	 // GET: /api/filmes/buscar/{id}
+        [HttpGet]
+        [Route("buscar/{id}")]
+        public IActionResult Buscar([FromRoute] int id)
+        {
+            Filme filme = _context.Filmes.Find(id);
+            return filme != null ? Ok(filme) : NotFound();
+        }
+
         // DELETE: /api/filmes/deletar/{id}
         [HttpDelete]
         [Route("deletar/{id}")]
@@ -60,7 +69,7 @@ namespace API.Controllers
         {
             Filme filme = _context.Filmes.FirstOrDefault
             (
-                filme => filme.Id == id
+                filme => filme.filmeId == id
             );
 
             if (id == null)
