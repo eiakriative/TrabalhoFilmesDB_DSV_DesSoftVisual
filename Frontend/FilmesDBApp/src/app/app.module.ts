@@ -22,6 +22,8 @@ import { CadastrarGeneroComponent } from './components/pages/genero/cadastrar-ge
 import { ListarGenerosComponent } from './components/pages/genero/listar-generos/listar-generos.component';
 import { CadastrarFilmeComponent } from './components/pages/filme/cadastrar-filme/cadastrar-filme.component';
 import { ListarFilmeComponent } from './components/pages/filme/listar-filme/listar-filme.component';
+import { CadastrarAtorComponent } from './components/pages/ator/cadastrar-ator/cadastrar-ator.component';
+import { ListarAtorComponent } from './components/pages/ator/listar-ator/listar-ator.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { ListarFilmeComponent } from './components/pages/filme/listar-filme/list
     CadastrarGeneroComponent,
     ListarGenerosComponent,
     CadastrarFilmeComponent,
-    ListarFilmeComponent
+    ListarFilmeComponent,
+    CadastrarAtorComponent,
+    ListarAtorComponent
   ],
   imports: [
     BrowserModule,

@@ -1,18 +1,15 @@
-  <table style="width:800px; margin:0 auto;" mat-table class="container">
+<table style="width:800px; margin:0 auto;" mat-table class="container">
     <!-- Position Column -->
    <ng-container matColumnDef="position" class="input">
      <th mat-header-cell ># </th>
     </ng-container>
-   <!-- Name Column -->
    <ng-container matColumnDef="name" class="input">
      <th mat-header-cell> Nome </th>
     </ng-container>
- 
     <ng-container matColumnDef="name" class="input">
-      <th mat-header-cell> Ano </th>
-     </ng-container>
+        <th mat-header-cell> Filme do ator </th>
+       </ng-container>
 
-   <!-- Weight Column -->
    <ng-container matColumnDef="edit" class="input">
      <th mat-header-cell> Alterar </th>
    </ng-container>
@@ -21,28 +18,28 @@
   </ng-container>
 
    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-   <tr mat-row *ngFor="let filme of filmes">
+   <tr mat-row *ngFor="let ator of atores">
      <ng-container matColumnDef="symbol" class="input">
-       <td mat-cell> {{filme.filmeId}} </td>
+       <td mat-cell> {{ator.filmeId}} </td>
      </ng-container>
         <ng-container matColumnDef="name" class="input">
-     <td mat-cell> {{filme.nome}} </td>
+     <td mat-cell> {{ator.nome}} </td>
     </ng-container>
     <ng-container matColumnDef="name" class="input">
-      <td mat-cell> {{filme.ano}} </td>
+      <td mat-cell> {{ator.filme?.nome}} </td>
      </ng-container>
      <ng-container matColumnDef="name" class="input">
-      <td mat-cell> {{filme.genero?.nome}} </td>
+      <td mat-cell> {{ator.genero?.nome}} </td>
      </ng-container>
       <ng-container matColumnDef="alterar"  class="input">
        <td mat-cell> 
-         <a mat-mini-fab color="primary" routerLink="/pages/filme/cadastrar/{{ filme.filmeId }}">
+         <a mat-mini-fab color="primary" routerLink="/pages/ator/cadastrar/{{ ator.atorId }}">
            <mat-icon>edit</mat-icon></a>  
        </td>
       </ng-container>
       <ng-container matColumnDef="deletar"  class="input">
         <td mat-cell> 
-          <button mat-mini-fab color="warn" (click)="remover(filme.filmeId!)"> <mat-icon>delete</mat-icon></button>
+          <button mat-mini-fab color="warn" (click)="remover(ator.atorId!)"> <mat-icon>delete</mat-icon></button>
         </td>
        </ng-container>
      

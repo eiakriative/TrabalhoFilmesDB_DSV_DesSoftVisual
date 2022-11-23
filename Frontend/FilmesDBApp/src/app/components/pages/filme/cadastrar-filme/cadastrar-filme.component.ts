@@ -23,10 +23,6 @@ export class CadastrarFilmeComponent implements OnInit {
     private route: ActivatedRoute, 
     private _snackBar: MatSnackBar) {}
 
-  // ngOnInit(): void {
-   
-  // }
-
   ngOnInit(): void {
     this.route.params.subscribe({
       next: (params) => {
