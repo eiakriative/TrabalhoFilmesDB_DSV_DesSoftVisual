@@ -38,19 +38,12 @@ namespace API.Controllers
 
         // PUT: /api/filmes/editar
         [Route("editar")]
-        [HttpPut]
+        [HttpPatch]
         public IActionResult Editar([FromBody] Filme filme)
         {
-            try
-            {
                 _context.Filmes.Update(filme);
                 _context.SaveChanges();
                 return Ok(filme);   
-            }
-            catch (System.Exception)
-            {
-                return NotFound("Fime não consta no banco!!!");
-            }
         }
 
 	 // GET: /api/filmes/buscar/{id}

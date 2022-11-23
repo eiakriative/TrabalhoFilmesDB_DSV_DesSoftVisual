@@ -1,16 +1,31 @@
-  <table style="width:800px; margin:5 auto;" class="container">
-    <tr>
-        <th>#</th>
-        <th>Nome</th>
-        <th>Alterar</th>
-    </tr>
-    <tr *ngFor="let genero of generos">
-        <td>{{genero.generoId}}</td>
-        <td>{{genero.nome}}</td>
-        <td>
-            <a routerLink="/pages/genero/cadastrar/{{ genero.generoId }}">
-                Alterar
-            </a>
-        </td>
-    </tr>
+<table style="width:800px; margin:0 auto;" mat-table class="container">
+   <!-- Position Column -->
+  <ng-container matColumnDef="position" class="input">
+    <th mat-header-cell ># </th>
+   </ng-container>
+  <!-- Name Column -->
+  <ng-container matColumnDef="name" class="input">
+    <th mat-header-cell> Nome </th>
+   </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="edit" class="input">
+    <th mat-header-cell> Alterar </th>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *ngFor="let genero of generos">
+    <ng-container matColumnDef="symbol" class="input">
+      <td mat-cell> {{genero.generoId}} </td>
+    </ng-container>
+    <ng-container matColumnDef="name"  class="input">
+      <td mat-cell> {{genero.nome}} </td>
+     </ng-container>
+     <ng-container matColumnDef="alterar"  class="input">
+      <td mat-cell> 
+        <a mat-mini-fab color="primary" routerLink="/pages/genero/cadastrar/{{ genero.generoId }}">
+          <mat-icon>edit</mat-icon></a>  
+      </td>
+     </ng-container>
+    
+  </tr>
 </table>

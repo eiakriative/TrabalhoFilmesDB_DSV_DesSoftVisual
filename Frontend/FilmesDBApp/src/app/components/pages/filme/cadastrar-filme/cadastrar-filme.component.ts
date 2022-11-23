@@ -32,11 +32,11 @@ export class CadastrarFilmeComponent implements OnInit {
       next: (params) => {
         let { id } = params;
         if (id !== undefined) {
-          this.http.get<Genero>(`https://localhost:5001/api/filmes/buscar/${id}`)
+          this.http.get<Filme>(`https://localhost:5001/api/filmes/buscar/${id}`)
           .subscribe({
-            next: (generos) => {
-              this.generoId = id!;
-              this.nome = generos.nome;
+            next: (filmes) => {
+              this.filmeId = id!;
+              this.nome = filmes.nome;
              },
           });
         }
@@ -50,18 +50,18 @@ export class CadastrarFilmeComponent implements OnInit {
   }
 
   alterar(): void {
-    console.log(this.generoId);
+    console.log(this.filmeId);
     let dataConvertida = new Date(this.data);
 
     let filme: Filme = {
-      filmeId: this.filmeId,
+     filmeId: this.filmeId,
       generoId: this.generoId,
       nome: this.nome,
       ano: dataConvertida.getFullYear(),
     };
-    this.http.put<Genero>("https://localhost:5001/api/filmes/editar", filme).subscribe({
+    this.http.patch<Filme>("https://localhost:5001/api/filmes/editar", filme).subscribe({
       next: (filme) => {
-        this.router.navigate(["pages/filme/listar"]);
+          this.router.navigate(["pages/filme/listar"]);
       },
     });
   }
@@ -74,7 +74,7 @@ export class CadastrarFilmeComponent implements OnInit {
       filmeId: this.filmeId,
       generoId: this.generoId,
       nome: this.nome,
-      ano: dataConvertida.getFullYear(),
+      ano: dataConvertida.getFullYear()
     };
 
     this.http.post<Filme>("https://localhost:5001/api/filmes/cadastrar", filme).subscribe({
