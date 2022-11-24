@@ -10,7 +10,7 @@
     </mat-form-field>
     <mat-form-field id="data" class="input">
       <mat-label for="txtData">Ano:</mat-label>
-      <input matInput type="date" id="txtData" [(ngModel)]="data" />
+      <input matInput type="numberdate" id="txtData" [(ngModel)]="ano"/>
     </mat-form-field>
       <mat-form-field id="generos" class="input">
       <mat-label for="selGeneros">Genero do filme</mat-label>
@@ -24,4 +24,4 @@
 
   <button mat-raised-button color="warn" *ngIf="!filmeId" id="btnCadastrar" (click)="cadastrar()">Cadastrar</button>
   <button mat-raised-button color="warn" *ngIf="filmeId" id="btnAlterar" (click)="alterar()">Alterar</button>
-  </mat-card>
+  </mat-card> 

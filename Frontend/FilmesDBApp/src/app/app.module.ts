@@ -16,7 +16,6 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { AppRoutingModule } from "./app-routing.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-
 import { AppComponent } from "./app.component";
 import { CadastrarGeneroComponent } from './components/pages/genero/cadastrar-genero/cadastrar-genero.component';
 import { ListarGenerosComponent } from './components/pages/genero/listar-generos/listar-generos.component';
@@ -24,7 +23,6 @@ import { CadastrarFilmeComponent } from './components/pages/filme/cadastrar-film
 import { ListarFilmeComponent } from './components/pages/filme/listar-filme/listar-filme.component';
 import { CadastrarAtorComponent } from './components/pages/ator/cadastrar-ator/cadastrar-ator.component';
 import { ListarAtorComponent } from './components/pages/ator/listar-ator/listar-ator.component';
-
 
 @NgModule({
   declarations: [
@@ -53,9 +51,9 @@ import { ListarAtorComponent } from './components/pages/ator/listar-ator/listar-
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    MatSnackBarModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+  export class AppModule { }

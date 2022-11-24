@@ -12,7 +12,7 @@ import { Filme } from 'src/app/models/filme';
 })
 export class CadastrarFilmeComponent implements OnInit {
   nome!: string;
-  data!: string;
+  ano!: number;
   generos!: Genero[];
   generoId!: number;
   filmeId!: number;
@@ -47,13 +47,12 @@ export class CadastrarFilmeComponent implements OnInit {
 
   alterar(): void {
     console.log(this.filmeId);
-    let dataConvertida = new Date(this.data);
 
     let filme: Filme = {
      filmeId: this.filmeId,
       generoId: this.generoId,
       nome: this.nome,
-      ano: dataConvertida.getFullYear(),
+      ano: this.ano
     };
     this.http.patch<Filme>("https://localhost:5001/api/filmes/editar", filme).subscribe({
       next: (filme) => {
@@ -64,13 +63,12 @@ export class CadastrarFilmeComponent implements OnInit {
 
   cadastrar(): void {
     console.log(this.generoId);
-    let dataConvertida = new Date(this.data);
-
+   
     let filme: Filme = {
       filmeId: this.filmeId,
       generoId: this.generoId,
       nome: this.nome,
-      ano: dataConvertida.getFullYear()
+      ano: this.ano
     };
 
     this.http.post<Filme>("https://localhost:5001/api/filmes/cadastrar", filme).subscribe({

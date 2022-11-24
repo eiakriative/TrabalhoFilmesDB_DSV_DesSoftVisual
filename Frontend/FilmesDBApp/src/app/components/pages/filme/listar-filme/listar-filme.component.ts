@@ -9,7 +9,8 @@ import { Filme } from 'src/app/models/filme';
 })
 export class ListarFilmeComponent implements OnInit {
   filmes!: Filme[];
-  nome!: string;
+  nome: string = '';
+  
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -35,4 +36,5 @@ export class ListarFilmeComponent implements OnInit {
         },
       });
   }
-}
+
+ }
